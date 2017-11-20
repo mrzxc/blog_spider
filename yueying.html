@@ -1,0 +1,432 @@
+<!DOCTYPE html> <html lang="zh-CN"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> <link rel="icon" href="">  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.html"> <meta name="keywords" content="前端开发,HTML5,H5,JavaScript,Web开发,ECMAScript,ES6,ES7,ESnext"> <meta name="description" content="专注于前端开发"> <title>
+  十年踪迹的博客
+</title> <link rel="stylesheet" href="/theme/firekylin/res/css/all.css" type="text/css">  <style>article img {
+    border: none;
+    max-width: 100%;
+}
+
+@media (min-width:640px) { 
+  article img{
+    max-width: 640px;
+  }
+}
+
+@media (max-width:500px) {
+  .entry-content iframe {
+    display: none;
+  }
+}
+
+#sidebar{
+    background-color: #202020!important;
+}
+</style>  
+<script type='text/javascript'>
+  var _vds = _vds || [];
+  window._vds = _vds;
+  (function(){
+    _vds.push(['setAccountId', '98b04d9454678df8']);
+    (function() {
+      var vds = document.createElement('script');
+      vds.type='text/javascript';
+      vds.async = true;
+      vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(vds, s);
+    })();
+  })();
+</script> 
+</head> <body> <nav id="sidebar" class="behavior_1"> <div class="wrap"> <div class="profile"> <a href="/"> <img src="/static/upload/201603/logo.jpg" alt="十年踪迹的博客"> </a> <span>十年踪迹的博客</span> </div> <ul class="buttons">  <li> <a class="" href="/" title="首页"> <i class="iconfont icon-home"></i> <span>首页</span> </a> </li>  <li> <a class="" href="/archives/" title="归档"> <i class="iconfont icon-archive"></i> <span>归档</span> </a> </li>  <li> <a class="" href="/tags/" title="标签"> <i class="iconfont icon-tags"></i> <span>标签</span> </a> </li>  <li> <a class="" href="/about/" title="关于"> <i class="iconfont icon-user"></i> <span>关于</span> </a> </li>  <li> <a class="" href="/links/" title="友链"> <i class="iconfont icon-link"></i> <span>友链</span> </a> </li>  <li> <a class="" href="https://ppt.baomitu.com/usercenter?user_name=%E5%8D%81%E5%B9%B4%E8%B8%AA%E8%BF%B9" title="分享"> <i class="iconfont icon-twitter-v"></i> <span>分享</span> </a> </li>  <li> <a class="" href="https://t.75team.com/video" title="视频"> <i class="iconfont icon-stackoverflow"></i> <span>视频</span> </a> </li>  </ul> <ul class="buttons"> <li>  <a class="inline" rel="nofollow" target="_blank" href="https://github.com/akira-cn"> <i class="iconfont icon-github-v" title="GitHub"></i> </a>   <a class="inline" href="/rss.html"> <i class="iconfont icon-rss-v" title="RSS"></i> </a> <a class="inline" href="/search.html"> <i class="iconfont icon-search" title="Search"></i> </a> </li> </ul> </div> </nav> <div id="header"> <div class="btn-bar"><i></i></div> <h1><a href="/">十年踪迹的博客</a></h1> <a class="me" href="/about/"><img src="/static/upload/201603/logo.jpg" alt="十年踪迹的博客"></a> </div> <div id="sidebar-mask"></div> <div id="main"> 
+<section id="page-index">
+
+  
+
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">08月22, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/timeline-for-animations.html#comments">0 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/timeline-for-animations.html">设计 Timeline 时间轴来更精确地控制动画</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>Firefox 偷偷实现了一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline">AnimationTimeline</a>，用来为动画提供时间轴。根据文档，它是一个抽象类，被 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline">DocumentTimeline</a> 继承。</p>
+<p>由于是非标准的特性，MDN的文档里面也没有解释的很清楚，只是说它用来让多个动画共享时间轴，但是具体该怎么用，并没有详细的说明。</p>
+<p>今天在这篇文章里，我并不想解释 Firefox 实现的这个 Timeline 该怎么用，而是借着这个 Timeline 的概念进行一些扩展，实现了一个全新的 <a href="https://github.com/spritejs/sprite-timeline">Timeline 库</a>。让我们看看如果为动画或者其他依赖于时间的行为设计一个 Timeline，我们能做什么。</p>
+
+      <p class="more">
+          <a href="/post/timeline-for-animations.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">08月05, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/signals-and-async.html#comments">0 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/signals-and-async.html">用信号来控制异步流程</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>我们知道，JavaScript 不管是操作 DOM，还是执行服务端任务，不可避免需要处理许多异步调用。在早期，许多开发者仅仅通过 JavaScript 的回调方式来处理异步，但是那样很容易造成异步回调的嵌套，产生 “Callback Hell”。</p>
+<p><img src="https://p1.ssl.qhimg.com/t012ba4a8fb02337f2f.jpg" alt=""> </p>
+
+      <p class="more">
+          <a href="/post/signals-and-async.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">06月26, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/js-functional-1.html#comments">10 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/js-functional-1.html">漫谈 JS 函数式编程（一）</a>
+    </h1>
+
+    <div class="entry-content">
+      <blockquote>
+<p>这可能是最简单易懂的函数式编程介（扯）绍（淡）了</p>
+</blockquote>
+<p><img src="https://p5.ssl.qhimg.com/t01be0fea9eac30db67.png" alt=""></p>
+<p>目前前端界（以及其他一些领域）对函数式编程大体上两种态度，一些人是觉得函数式编程特牛逼，尤其是现在许多新生的框架和库都在标榜自己的函数式特征。而另一些人，又觉得函数式编程学起来很难，而且似乎也没有什么卵用，理由是在自己经历的项目里面很难看到具体的函数式编程应用场景，甚至其中许多人认同一个观点，觉得函数式编程只适合于学术研究，很难在工程项目中实际使用。</p>
+
+      <p class="more">
+          <a href="/post/js-functional-1.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">06月15, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/three-black-tech-in-modern-js.html#comments">5 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/three-black-tech-in-modern-js.html">JavaScript 最新特性实现的三大黑科技</a>
+    </h1>
+
+    <div class="entry-content">
+      <h2 id="-">依次执行多项异步任务</h2>
+<p>有时候，我们希望批量执行一组异步任务，但是不是<strong>并行</strong>，而是依次执行，这组任务是动态的，在一个数组里，当然我们可以用 for 循环然后一个一个 await 执行，但是还有另外一种方式：</p>
+
+      <p class="more">
+          <a href="/post/three-black-tech-in-modern-js.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">05月12, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/segment-with-nodejs.html#comments">2 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/segment-with-nodejs.html">使用 Node.js 对文本内容分词和关键词抽取</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>在讨论技术前先卖个萌，吃货的世界你不懂~~</p>
+<p><img src="https://p1.ssl.qhimg.com/t01ee4cb9bf6b602f75.png" alt=""></p>
+
+      <p class="more">
+          <a href="/post/segment-with-nodejs.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">04月19, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/handlock-comp.html#comments">13 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/handlock-comp.html">如何用原生 JS 实现手势解锁组件</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>这是<a href="https://html5.360.cn/star">第三届 360 前端星计划</a>的选拔<a href="https://www.h5jun.com/post/75team-star-handlock.html">作业题</a>。600多名学生参与了解答，最后通过了60人。这60名同学完成的不错，思路、代码风格、功能完成度颇有可取之处，不过也有一些欠考虑的地方，比如发现很多同学能按照需求实现完整的功能，但是不知道应当如何<strong>设计开放的 API</strong>，或者说，如何分析和预判产品需求和未来的变化，从而决定什么应当开放，什么应当封装。这无关于答案正确与否，还是和经验有关。</p>
+<p>在这里，我提供一个<a href="https://github.com/akira-cn/handlock">参考的版本</a>，并不是说这一版就最好，而是说，通过这一版，分析当我们遇到这样的比较复杂的 UI 需求的时候，我们应该怎样思考和实现。</p>
+
+      <p class="more">
+          <a href="/post/handlock-comp.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">04月18, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/babel-plugin-private.html#comments">5 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/babel-plugin-private.html">使用 babel 插件来打造真正的“私有”属性</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>大家都知道 JavaScript 的对象属性默认是可以被从外部访问和修改的，也就是说，JavaScript 本身不存在完全“私有”的对象属性。例如：</p>
+<pre><code class="hljs lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span></span>{
+    <span class="hljs-keyword">constructor</span>(x, y){
+        <span class="hljs-keyword">this</span>._x = x;
+        <span class="hljs-keyword">this</span>._y = y;
+    }
+    get length(){
+        <span class="hljs-keyword">const</span> {_x, _y} = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.sqrt(_x * _x + _y * _y);
+    }
+}
+
+<span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+<span class="hljs-built_in">console</span>.log(p._x, p._y, p.length); <span class="hljs-comment">//3, 4, 5</span>
+</code></pre>
+<p>在上面的代码里，我们<strong>约定俗成</strong>地用下划线开头来表示私有变量。我们希望 _x、_y 不被外部访问，然而，这只是我们一厢情愿，使用者还是可以访问到这两个变量。</p>
+<p>在这里，我们不讨论 ES 的 <a href="https://github.com/tc39/proposal-private-fields">private 标准提案</a>，而是讨论如何使用工具来将约定变成真正的私有。</p>
+
+      <p class="more">
+          <a href="/post/babel-plugin-private.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">04月06, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/75team-star-handlock.html#comments">3 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/75team-star-handlock.html">第三届360前端星计划在线作业题</a>
+    </h1>
+
+    <div class="entry-content">
+      <h1 id="2017-">2017 前端星计划选拔作业</h1>
+<p>在移动端设备上，“手势密码”成为一个很常用的 UI 组件。</p>
+<p>一个手势密码的界面大致如下：</p>
+<p><img src="https://p1.ssl.qhimg.com/t01d73f4b567014b497.png" alt=""></p>
+
+      <p class="more">
+          <a href="/post/75team-star-handlock.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">03月31, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/hamster-elec.html#comments">12 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/hamster-elec.html"> 共享经济的未来：用 Node.js 玩转分布式鼠电站</a>
+    </h1>
+
+    <div class="entry-content">
+      <p><img src="https://p.ssl.qhimg.com/t01b0785c1023039d78.jpg" alt=""></p>
+<p>当今社会，许多人喜欢养宠物陪伴自己和家人。而仓鼠以其可爱的外表、爱干净的习性和温顺可爱的性格成为许多城市家庭养宠物的选择。</p>
+<p>在这个物联网时代，共享经济是人类发展的未来。让可爱的小仓鼠不仅仅能作为卖萌讨巧的宠物，还可以发挥其经济价值，为家庭做出贡献，正是新的万维物联网（Web of Things）云平台将要做的事情。</p>
+
+      <p class="more">
+          <a href="/post/hamster-elec.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <article class="post">
+    <div class="meta">
+      <div>
+        
+          <span class="author">
+            
+            admin
+          </span>
+          <span>发布于</span>
+        
+        <span class="date">03月26, 2017</span>
+      </div>
+      <div class="comment">
+          <a href="/post/parseInt-to-functional.html#comments">10 comments</a>
+      </div>
+    </div>
+
+    <h1 class="title">
+      <a href="/post/parseInt-to-functional.html">从一道坑人的面试题说函数式编程</a>
+    </h1>
+
+    <div class="entry-content">
+      <p>一道著名的坑人题，可能一些同学见过：</p>
+<pre><code class="hljs lang-js">[<span class="hljs-string">'2'</span>, <span class="hljs-string">'3'</span>, <span class="hljs-string">'4'</span>].map(<span class="hljs-built_in">parseInt</span>);
+</code></pre>
+<p>说出上面代码的执行结果。</p>
+
+      <p class="more">
+          <a href="/post/parseInt-to-functional.html">阅读全文 »</a>
+      </p>
+    </div>
+
+  </article>
+  
+  <nav class="pagination">
+  
+
+  
+    
+    <a href="/?page=2" class="next">下一页 &raquo;</a>
+  
+
+  <div class="center"><a href="/archives.html">博客归档</a></div>
+</nav>
+
+</section>
+ <footer id="footer" class="inner"> &copy; 2017&nbsp;-&nbsp; 十年踪迹的博客  &nbsp;-&nbsp;<a target="_blank" rel="nofollow" class="external beian" href="http://www.miitbeian.gov.cn/">京ICP备15048708号-1</a>  <br /> Powered by&nbsp;<a target="_blank" href="https://thinkjs.org">ThinkJS</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="nofollow" class="external" href="https://firekylin.org">FireKylin 0.15.5</a> </footer> </div> <script src="/theme/firekylin/res/js/firekylin.js"></script>  <script>
+var _hmt = _hmt || [];
+(function() {
+    var e = document.createElement("script");
+    e.src = "//hm.baidu.com/hm.js?88ba48b4094748ba7d7e28aca58cddcf";
+    var t = document.getElementsByTagName("script")[0];
+    t.parentNode.insertBefore(e, t)
+})();
+</script>  <script>//(function(){function e(e){e=e||document;var t=e.defaultView||e.parentWindow,n=e.compatMode,r=e.documentElement,i=t.innerHeight||0,s=t.innerWidth||0,o=t.pageXOffset||0,u=t.pageYOffset||0,a=r.scrollWidth,f=r.scrollHeight;return n!="CSS1Compat"&&(r=e.body,a=r.scrollWidth,f=r.scrollHeight),n&&(s=r.clientWidth,i=r.clientHeight),a=Math.max(a,s),f=Math.max(f,i),o=Math.max(o,e.documentElement.scrollLeft,e.body.scrollLeft),u=Math.max(u,e.documentElement.scrollTop,e.body.scrollTop),{width:s,height:i,scrollWidth:a,scrollHeight:f,scrollX:o,scrollY:u}}function t(e){var t=n(e),r=t[0],i=t[1],s=e.offsetWidth,o=e.offsetHeight;return{width:s,height:o,left:r,top:i,bottom:i+o,right:r+s}}function n(t){var n=t.ownerDocument,r=e(n),i=r.scrollX,s=r.scrollY,o=t.getBoundingClientRect(),u=[o.left,o.top],a,f,l;if(s||i)u[0]+=i,u[1]+=s;return u}function r(){var e=e||document,t=e.createElement("script");t.src="https://dn-h5jun.qbox.me/duoshuo-h5jun.js",t.setAttribute("data-timestamp",+(new Date)),(e.head||e.body).appendChild(t)}var i=document.getElementById("comments");if(i){i.setAttribute("data-type","user-def"),window.duoshuoQuery={short_name:"h5jun"};var s=setInterval(function(){var n=e(),o=n.scrollY+n.height,u=t(i).top;Math.abs(u-o)<1e3&&(r(),clearInterval(s))},300)}})();
+
+var matched = location.search.match(/isct-token=([^&]+)/)
+var isctToken
+if(matched){
+  isctToken = matched[1]
+  
+  var links = document.querySelectorAll('a')
+  links.forEach(function(link){
+    if(link.search){
+      link.search += '&isct-token=' + isctToken
+    } else {
+      link.search = '?isct-token=' + isctToken
+    }
+  });
+  
+  var scriptEl = document.createElement('script')
+    scriptEl.src = 'https://s1.ssl.qhres.com/!84babcb9/intersection-1.0.0.js'
+    scriptEl.dataset.isctServer = 'wss://isct.h5jun.com'
+    scriptEl.dataset.isctToken = isctToken
+
+  document.body.appendChild(scriptEl)
+}
+</script>  </body> </html>

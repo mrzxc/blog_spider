@@ -1,0 +1,11 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "cheerio": "0.17.0",
+    "request": "2.40.0",
+    "underscore": "1.6.0",
+    "underscore.string": "2.3.3",
+    "url-parse": "^1.2.0"
+  }
+}
