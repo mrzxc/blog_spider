@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "production": {},
+    "development": {
+      "preset": [
+        "react",
+        [ "es2015", { "modules": false } ] 
+      ]  
+    }
+  }
+}
